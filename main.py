@@ -9,19 +9,26 @@ def run_code(filepath):
         print("Error: ", e)
 
 def get_solutions(day):
-    print(f"Running solution for day {day} on ChatGPT...")
+    print(f"Day {day} Part 1")
+    print("=============")
+    print(f"Running solution for day {day} part 1 on ChatGPT...")
     run_code(f"solutions/day-{day}/part1-chat.py")
-    print(f"\nRunning modified solution for day {day}...")
+    print(f"\nRunning modified solution for day {day} part 1...")
     run_code(f"solutions/day-{day}/part1-me.py")
-    print(f"\nRunning solution for day {day} on ChatGPT...")
+    print("\n")
+
+    print(f"Day {day} Part 2")
+    print("=============")
+    print(f"Running solution for day {day} part 2 on ChatGPT...")
     run_code(f"solutions/day-{day}/part2-chat.py")
-    print(f"\nRunning modified solution for day {day}...")
+    print(f"\nRunning modified solution for day {day} part 2...")
     run_code(f"solutions/day-{day}/part2-me.py")
+    print("\n")
 
 def main():
-    day = input("Which day do you want to run? ")
-    if int(day) < 1 or int(day) > 1:
-        print("Invalid day.")
+    day = input("\nWhich day do you want to run? ")
+    if day == '' or int(day) < 1 or int(day) > 1:
+        print("Invalid day. Must be between 1 and 1.\n")
         return
 
     # print a pretty ascii banner that says advent of code - chatgpt edition
