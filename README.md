@@ -8,7 +8,10 @@ OpenAI's ChatGPT model came out today (November 30), one day before the start of
 Each day, I'll simply copy the prompt from the puzzle as-is and append one sentence to the end: "Take input from a file located at inputs/day-1.txt." This should force ChatGPT to read the input from a file instead of `input()` which is what it does without prompting. I suspect there may be file path issues in the future, but I'll fix errors related to that without penalizing ChatGPT since I think it's a reasonable assumption that the model would be able to read from a file.
 
 ## Usage
-You can run `main.py` and input the day to run ChatGPT's solutions and the correct solutions.
+You can run `main.py` and input the day to run ChatGPT's solutions and the correct solutions. You'll see something like this:
+
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/47067154/204980550-ad03b3e3-258b-4f4a-bbc1-a997bad9f69e.png">
+
 
 ## Recap
 | Day | Puzzle | Errors |
