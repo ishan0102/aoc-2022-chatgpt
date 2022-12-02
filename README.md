@@ -19,7 +19,7 @@ Each day's puzzles are located in `solutions/day-XX` and `chatgpt.py` is ChatGPT
 | Day | Puzzle | Errors |
 | --- | --- | --- |
 | 1 | [Calorie Counting](https://adventofcode.com/2022/day/1) | Split newlines incorrectly in the input file. |
-| 2 | [Rock Paper Scissors](https://adventofcode.com/2022/day/2) | Forgot to convert the input file to a list. |
+| 2 | [Rock Paper Scissors](https://adventofcode.com/2022/day/2) | Read input file incorrectly. Off-by-one error. Used variable names that didn't associate with the prompt. |
 
 ## Details
 
