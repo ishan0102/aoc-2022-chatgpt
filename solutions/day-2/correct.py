@@ -1,6 +1,6 @@
 # Open the input file and read the strategy guide
-with open("inputs/day-2.txt", "r") as input_file:
-  strategy_guide = input_file.read()
+with open('inputs/day-2.txt') as f:
+  strategy_guide = f.read()
 
 # Initialize the total score to 0
 total_score = 0
@@ -10,7 +10,9 @@ letter_scores = {"X": 1, "Y": 2, "Z": 3}
 shape_map = {"A": "X", "B": "Y", "C": "Z"}
 
 # Split the strategy guide into a list of rounds, where each round is represented as a string of length 5
-rounds = [strategy_guide[i:i+4] for i in range(0, len(strategy_guide), 4)]
+rounds = []
+for i in range(0, len(strategy_guide), 4):
+  rounds.append(strategy_guide[i:i+4])
 
 # Loop through each round in the strategy guide
 for round in rounds:

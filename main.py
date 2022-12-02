@@ -4,11 +4,11 @@ from datetime import datetime, timezone, timedelta
 def run_code(filepath):
     with open(filepath, "r") as f:
         code = f.read()
-    
+
     try:
         exec(code)
     except Exception as e:
-        print("Error: ", e)
+        print(f"{type(e).__name__}: {e}")
 
 def get_solutions(day):
     print(f"Day {day} Solutions:")
@@ -27,12 +27,6 @@ def days_since_dec1():
     return difference.days
 
 def main():
-    day = input("\nWhich day do you want to run? ")
-    current_day = days_since_dec1() + 1
-    if day == '' or int(day) < 1 or int(day) > current_day:
-        print(f"Invalid day. Must be between 1 and {current_day}.\n")
-        return
-
     print("""
  __| |____________________________________________| |__
 (__   ____________________________________________   __)
@@ -44,9 +38,22 @@ def main():
  __| |____________________________________________| |__
 (__   ____________________________________________   __)
    | |                                            | |
-
     """)
-    get_solutions(day)
+
+    current_day = days_since_dec1() + 1
+    day = input(f"\nWhich day do you want to run? Can be a number from 1 to {current_day} or 'all': ")
+    print("\n")
+
+    if day == "all":
+        for i in range(1, current_day + 1):
+            get_solutions(i)
+
+    elif day != '' and int(day) >= 1 and int(day) <= current_day:
+        get_solutions(day)
+        
+    else:
+        print(f"Invalid day. Must be between 1 and {current_day}.\n")
+
 
 if __name__ == "__main__":
     main()

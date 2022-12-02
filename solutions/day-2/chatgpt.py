@@ -9,7 +9,9 @@ total_score = 0
 letter_scores = {"A": 1, "B": 2, "C": 3}
 
 # Split the strategy guide into a list of rounds, where each round is represented as a string of length 5
-rounds = [strategy_guide[i:i+5] for i in range(0, len(strategy_guide), 5)]
+rounds = []
+for i in range(0, len(strategy_guide), 5):
+  rounds.append(strategy_guide[i:i+5])
 
 # Loop through each round in the strategy guide
 for round in rounds:
