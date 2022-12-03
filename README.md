@@ -20,6 +20,7 @@ Each day's puzzles are located in `solutions/day-XX` and `chatgpt.py` is ChatGPT
 | --- | --- | --- |
 | 1 | [Calorie Counting](https://adventofcode.com/2022/day/1) | Split newlines incorrectly in the input file. |
 | 2 | [Rock Paper Scissors](https://adventofcode.com/2022/day/2) | Read input file incorrectly. Off-by-one error. Used variable names that didn't associate with the prompt. |
+| 3 | [Rucksack Reorganization](https://adventofcode.com/2022/day/3) | Worked perfectly. |
 
 ## Details
 
@@ -28,3 +29,6 @@ The first error I ran into was a `ValueError: invalid literal for int() with bas
 
 ### Day 2: Rock Paper Scissors
 Right off the bat, ChatGPT seems to get confused on how the strategy guide works so I had to prompt it a bit to explain that the dictionary keys should be `A`, `B`, and `C` instead of `Rock`, `Paper`, and `Scissors`. After that, I hit a `KeyError: ' '` which is because of how it was reading in the input. Then, there were a few minor errors like an off-by-one for the number of characters to read in per line (5 instead of 4) which resulted in an `IndexError`. Also, ChatGPT forgot that `A` associates with `X` and so on, so I had to add an extra map for that. After that, it worked perfectly.
+
+### Day 3: Rucksack Reorganization
+Not sure what to say here because it just worked perfectly on the first try. No notes!
