@@ -22,6 +22,7 @@ Each day's puzzles are located in `solutions/day-XX` and `chatgpt.py` is ChatGPT
 | 2 | [Rock Paper Scissors](https://adventofcode.com/2022/day/2) | Read input file incorrectly. Off-by-one error. Used variable names that didn't associate with the prompt. |
 | 3 | [Rucksack Reorganization](https://adventofcode.com/2022/day/3) | Worked perfectly. |
 | 4 | [Camp Cleanup](https://adventofcode.com/2022/day/4) | Split input on hyphens instead of commas. Loop iteration should have been pairwise. Indexed second element in a pair wrong. |
+| 5 | [Supply Stacks](https://adventofcode.com/2022/day/5) | Too hard. |
 
 ## Details
 
@@ -36,3 +37,6 @@ Not sure what to say here because it just worked perfectly on the first try. No 
 
 ### Day 4: Camp Cleanup
 I prompted it a bit to get it to parse the input but wasn't able to get it to work all the way, so I had to add a line that split by the comma instead of only the hyphen in order to separate both pairs. Another issue is that the code was double counting because it wasn't iterating by pairs, so I had to change the iteration to `range(0, len(input), 2)`. Finally, it indexed the second element of the pair with `pairs[1 - i]` for some reason which I changed to `pairs[i + 1]`, which was the last bug.
+
+### Day 5: Supply Stacks
+This day actually threw me for a loop because parsing the input is so challenging. After spending a while on prompting I wasn't able to produce anything meaningful. I might actually stop after today if the puzzles keep getting harder because I don't want to spend all this time messing with input parsing. This highlights some of the limitations well, we still need human input to coax the model into understanding how to break down a hard problem.
